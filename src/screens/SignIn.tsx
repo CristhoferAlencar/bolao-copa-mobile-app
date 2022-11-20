@@ -1,5 +1,5 @@
 import { Center, Icon, Text } from "native-base";
-import { Fontisto } from '@expo/vector-icons'
+import { Fontisto } from '@expo/vector-icons';
 
 import Logo from '../assets/logo.svg';
 import { Button } from "../components/Button";
@@ -8,8 +8,7 @@ import { useAuth } from "../hooks/useAuth";
 export const SignIn = () => {
   const { signIn, user } = useAuth();
 
-  console.log('User Data', user);
-  
+  // console.log(AuthSession.makeRedirectUri({ useProxy: true }));
 
   return (
     <Center flex={1} bgColor="gray.900" p={7}>
