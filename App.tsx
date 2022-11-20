@@ -7,7 +7,7 @@ import {
   Roboto_500Medium,
   Roboto_700Bold,
 } from "@expo-google-fonts/roboto";
-import { SignIn } from "./src/screens/SignIn";
+import { Polls } from "./src/screens/Polls";
 import { AuthContextProvider } from "./src/contexts/AuthContext";
 
 export default function App() {
@@ -25,7 +25,7 @@ export default function App() {
           backgroundColor="transparent"
           translucent
         />
-        {fontsLoaded ? <SignIn /> : <Loading />}
+        {fontsLoaded ? <Polls /> : <Loading />}
       </AuthContextProvider>
     </NativeBaseProvider>
   );
