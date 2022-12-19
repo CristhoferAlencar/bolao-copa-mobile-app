@@ -11,8 +11,6 @@ export const Find = () => {
       <Header title="Buscar por código" showBackButton />
 
       <VStack mt={8} mx={5} alignItems="center">
-        <Logo />
-
         <Heading
           fontFamily="heading"
           color="white"

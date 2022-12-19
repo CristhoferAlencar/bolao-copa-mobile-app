@@ -7,8 +7,9 @@ import {
   Roboto_500Medium,
   Roboto_700Bold,
 } from "@expo-google-fonts/roboto";
-import { Polls } from "./src/screens/Polls";
+// import { Polls } from "./src/screens/Polls";
 import { AuthContextProvider } from "./src/contexts/AuthContext";
+import { Find } from "./src/screens/Find";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -25,7 +26,7 @@ export default function App() {
           backgroundColor="transparent"
           translucent
         />
-        {fontsLoaded ? <Polls /> : <Loading />}
+        {fontsLoaded ? <Find /> : <Loading />}
       </AuthContextProvider>
     </NativeBaseProvider>
   );
