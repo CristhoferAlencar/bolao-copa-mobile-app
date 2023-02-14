@@ -12,7 +12,6 @@ export const New = () => {
   const [isLoading, setIsLoading] = useState(false);
   const toast = useToast();
 
-
   const handlePollCreate = async () => {
     if(!title.trim()) {
       return toast.show({
@@ -22,7 +21,6 @@ export const New = () => {
       });
     }
 
-    
     try {
       setIsLoading(true);
       
