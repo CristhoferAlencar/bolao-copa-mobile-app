@@ -9,6 +9,7 @@ import { PoolHeader } from "../components/PoolHeader";
 import { EmptyMyPoolList } from "../components/EmptyMyPoolList";
 import { Option } from "../components/Option";
 import { Share } from "react-native";
+import { Guesses } from "../components/Guesses";
 
 interface RouteParams {
     id: string;
@@ -16,7 +17,7 @@ interface RouteParams {
 
 export const Details = () => {
   const [optionSelected, setOptionSelected] = useState<'guesses' | 'ranking'>('guesses');
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [pollDetails, setPollDetails] = useState<PoolCardProps>({} as PoolCardProps);
 
   const toast = useToast();
@@ -80,6 +81,8 @@ export const Details = () => {
                         onPress={() => setOptionSelected('ranking')}
                     />
                 </HStack>
+
+                <Guesses pollId={pollDetails.id} code={pollDetails.code} />
             </VStack>
 
             : <EmptyMyPoolList code={pollDetails.code} />
